@@ -1,0 +1,55 @@
+.parent{
+    height: 100vh;
+    background: linear-gradient(to right,#9900ff,#cc80ff);display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.signupcontainer{
+    /* border: 1px solid red; */
+    width: 25%;
+    margin: auto;
+    background-color: white;
+    padding: 40px 30px 50px 20px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+.signupcontainer h2{
+    font-size: 30px;
+}
+
+.signupcontainer input{
+    border-radius: 5px;
+    border: 1px solid #eee;
+    outline: none;
+    padding: 8px 0px;
+    color: #000;
+    margin-top: 15px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.signupcontainer input:hover{
+    border-color: #ccc;
+}
+
+.signupcontainer input:focus{
+    border-color: #9900ff;
+}
+.signupcontainer button{
+    width: 50%;
+    padding: 7px 0px;
+    border-radius: 5px;
+    background-color: #bc58ff;
+    border: none;
+    color: white;
+    margin-top: 30px;
+}
+
+.signupcontainer button:disabled{
+    background-color: rgb(160, 159, 159); 
+}
+
+.signupcontainer b{
+    color: red;
+}
