@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 import {auth} from '../../components/firebase'
 import styles from './Signup.module.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [filldetails,setFilldetails]=useState(false)
     const [disablebtn,setDisablebtn]=useState(false)
+    const navigate=useNavigate()
   
     const handleRegister = async () => {
         if(!email || !password){
@@ -21,6 +22,7 @@ const Signup = () => {
         .then((res)=>{
             // console.log(res)
             setDisablebtn(false)
+            navigate('/')
         })
         .catch((err)=>{
             // console.log(err)

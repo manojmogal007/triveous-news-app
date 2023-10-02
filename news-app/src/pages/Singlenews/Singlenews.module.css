@@ -1,0 +1,82 @@
+.singlenewscontainer{
+   background-color: rgb(201, 200, 200);
+   min-height: 100vh;
+}
+
+.titleandimage{
+    /* display: flex; */
+    width: 60%;
+    margin: auto;
+    padding-top: 40px;
+    background-color: white;
+    padding: 40px 20px 0px 20px;
+    min-height: 100vh;
+}
+b{
+    padding-bottom: 40px;
+    /* font-size: 35px; */
+}
+.data{
+    /* display: flex; */
+    /* border: 1px solid red; */
+    padding-top: 40px;
+}
+.picture img{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    object-fit: fill;
+}
+.picture+div{
+    margin-left: 30px;
+}
+.links{
+    display: flex;
+    justify-content: end;
+}
+.links>*{
+    margin: 20px;
+}
+.titleandimage b{
+    font-size: 20px;
+}
+.hearticon{
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+}
+.redheart{
+    color: red;
+    height: 30px;
+    width: 30px;
+}
+.borderedheart{
+    height: 30px;
+    width: 30px;
+}
+button{
+    padding: 4px 15px;
+    border-radius: 5px;
+    background-color: rgb(34, 29, 29);
+    color: white;
+    cursor: pointer;
+}
+
+.offline{
+    color: red;
+  }
+@media screen and (max-width: 1000px) {
+    .singlenewscontainer{
+        width: 100%;
+    }
+    .titleandimage{
+        width: 80%;
+        padding: 30px 15px 0px 15px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .titleandimage{
+        width: 95%;
+        padding: 20px 10px 0px 10px;
+    }
+}

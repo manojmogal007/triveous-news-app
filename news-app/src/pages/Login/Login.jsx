@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-// import firebase from '../components/firebase';
 import {auth} from '../../components/firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import styles from '../Signup/Signup.module.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [filldetails,setFilldetails]=useState(false)
   const [disablebtn,setDisablebtn]=useState(false)
+  const navigate=useNavigate()
 
   const handleLogin = async () => {
     if(!email || !password){
@@ -19,8 +19,10 @@ function Login() {
     setDisablebtn(true)
     signInWithEmailAndPassword(auth,email,password)
     .then((res)=>{
-        // console.log(res)
+        // console.log(res.user.accessToken)
+        localStorage.setItem('accesstoken',res.user.accessToken)
         setDisablebtn(false)
+        navigate('/allnews')
     })
     .catch((err)=>{
         // console.log(err,'login failed')

@@ -53,3 +53,15 @@
 .signupcontainer b{
     color: red;
 }
+
+@media screen and (max-width: 1000px) {
+    .signupcontainer{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .signupcontainer{
+        width: 90%;
+    }
+}
