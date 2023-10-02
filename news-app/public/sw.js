@@ -12,7 +12,8 @@ this.addEventListener("install",(event)=>{
                 '/signup',
                 '/singlenews',
                 '/favoritesinglenews',
-                '/favoritenews'            
+                '/favoritenews',
+                '/manifest.json'            
             ])
         })
     )

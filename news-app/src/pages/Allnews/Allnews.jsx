@@ -17,11 +17,18 @@ const Allnews = () => {
   };
 
   const fetchnews=()=>{
-    axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=1e32b63bdfff45919a3887a33c221448')
+    // axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=1e32b63bdfff45919a3887a33c221448')
+    axios({
+      method:'GET',
+      url:'https://newsapp-33ccf-default-rtdb.firebaseio.com/news.json'
+    })
     .then((res)=>{
       // console.log(res.data.articles)
-      setAllnews(res.data.articles)
-      localStorage.setItem('allnews',JSON.stringify(res.data.articles))
+
+      // setAllnews(res.data.articles)
+      let data=res.data
+      setAllnews(Object.values(data))
+      localStorage.setItem('allnews',JSON.stringify(Object.values(data)))
     })
     .catch((err)=>{
       console.log(err)
@@ -30,6 +37,19 @@ const Allnews = () => {
       setMode(true)
       setAllnews(data)
     })
+    // fetch('https://newsapi.org/v2/everything?q=bitcoin&apiKey=1e32b63bdfff45919a3887a33c221448')
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     // Handle the JSON data here
+    //     console.log(data.articles);
+    //     setAllnews(data.articles)
+    //   })
+    //   .catch((error) => {
+    //     // Handle any errors that occurred during the fetch operation
+    //     console.error('Fetch error:', error);
+    //   });
   }
 
   useEffect(()=>{
