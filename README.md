@@ -7,7 +7,7 @@ You can read daily news articles here
    ```
    Frontend : React JS
 
-    Backend : Firebase 
+   Backend : Firebase 
    
    State Management : Context-api
    
